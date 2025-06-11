@@ -71,8 +71,10 @@ export const getUserCart = async(req,res) => {
 
 export const deleteCartProduct = async (req, res) => {
     try {
-        const {_id} = req.body;
-        await Cart.deleteOne({_id})
+        const id = req.params;
+        // console.log(id.id);
+        
+        await Cart.deleteOne({_id:id.id})
 
         res.status(200).json("Cart item Deleted")
     } catch (error) {

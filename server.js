@@ -10,7 +10,8 @@ import DBConnection from "./utils/db.js";
 const app = express()
 
 const corsOptions = {
-    origin: "http://localhost:3000",
+    // origin: "http://localhost:3000",
+    origin: "https://shopingo.vercel.app",
     methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
     Credentials:true
 }
