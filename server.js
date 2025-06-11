@@ -10,15 +10,14 @@ import DBConnection from "./utils/db.js";
 const app = express()
 
 const corsOptions = {
-    // origin: "http://localhost:3000",
-    origin: "https://shopingo.vercel.app",
+    origin: "https://clothiqs.vercel.app",
     methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
     Credentials:true
 }
 
 app.use(cors(corsOptions));
 
-app.use(express.json())
+app.use(express.json()) 
 
 app.use('/uploads', express.static('uploads'));
 
